@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+<ul class="wines">
+  <% for(var i=0; i<wines.length; i++) {%>
+    <li class="quote">
+      <span><%= wines[i].name %></span> /
+      <span><%= wines[i].year %></span> /
+      <span><%= wines[i].grapes %></span> /
+      <span><%= wines[i].country %></span>
+    </li>
+  <% } %>
+</ul>
+  <form action="/wines" method="POST">
+  <input type="text" placeholder="name" name="name"><br />
+  <input type="text" placeholder="year" name="year"><br />
+  <input type="text" placeholder="grapes" name="grapes"><br />
+  <input type="text" placeholder="country" name="country"><br />
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
